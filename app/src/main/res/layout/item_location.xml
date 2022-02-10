@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="model"
+            type="net.alanproject.domain.model.DomainLocationModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_epi"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_margin="16dp"
+            android:src="@drawable/location_icon"
+            app:shapeAppearanceOverlay="@style/roundedCornerImageView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_episode_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@{model.type}"
+            android:textColor="@color/green"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@id/tv_episode_title"
+            app:layout_constraintStart_toEndOf="@id/iv_epi"
+            app:layout_constraintTop_toTopOf="@id/iv_epi"
+            tools:text="Pilot" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_episode_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{model.name}"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/tv_episode_date"
+            app:layout_constraintStart_toStartOf="@id/tv_episode_no"
+            app:layout_constraintTop_toBottomOf="@id/tv_episode_date"
+            tools:text="Earth" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_episode_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="@{model.dimension}"
+            android:textColor="@color/light_grey_2"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_epi"
+            app:layout_constraintStart_toStartOf="@id/tv_episode_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_episode_title"
+            tools:text="2 DEC 2019" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

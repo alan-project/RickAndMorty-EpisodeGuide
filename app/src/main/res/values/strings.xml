@@ -1,0 +1,56 @@
+<resources>
+
+    <!--    Config -->
+    <string name="info_github_key" translatable="false">info_github</string>
+    <string name="info_app_key" translatable="false">info_app</string>
+    <string name="setting_dark_key" translatable="false">setting_dark</string>
+
+    <string name="app_name">RickAndMorty</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="tv_species_title">Species</string>
+    <string name="tv_gender_title">Gender</string>
+    <string name="tv_known_place_title">Last known location:</string>
+    <string name="tv_first_seen_title">First seen in:</string>
+    <string name="tv_episode_title">Episode List</string>
+    <string name="tv_epi_title">Episode</string>
+    <string name="tv_air_date_title">Air Date</string>
+    <string name="tv_synop_title">Synopsis</string>
+    <string name="tv_character_title">Character List</string>
+    <string name="tv_type_title">Type</string>
+    <string name="tv_dimension_title">Dimension</string>
+    <string name="tv_residents_title">Residents List</string>
+    <string name="tv_no_resident">No Residents</string>
+    <string name="tv_search_character">Search Character</string>
+    <string name="tv_tt_characters">Total Characters: 826</string>
+    <string name="tv_search_locations">Search Location</string>
+    <string name="info_app_summary">Rick and Morty is a science-fiction, black comedy series about genius inventory, Rick Sanchez, and his naive grandson, Morty Smith, created by Justin Roiland and Dan Harmon.</string>
+    <string name="info_app_title">Rick and Morty</string>
+    <string name="info_github_summary">This application is based on modern Android tech-stacks and architecture with RESTful API developed by Axel Fuhrmann. \nPlease check it out if interested!</string>
+    <string name="info_github_title">Github</string>
+    <string name="app_info_title">App Info</string>
+    <string name="app_settings_title">App Settings</string>
+    <string name="setting_dark_title">Dark Mode</string>
+    <string name="rating">rating</string>
+    <string name="rating_summary">Tell others what you think</string>
+    <string name="rating_title"><![CDATA[Rating & Review]]></string>
+    <string name="send_feedback">send_feedback</string>
+    <string name="send_feedback_summary">Please report any issues or recommend new features.</string>
+    <string name="send_feedback_title">Send Feedback</string>
+    <string name="version">version</string>
+    <string name="version_summary">2.1.1</string>
+    <string name="version_title">Version</string>
+    <string name="email_address">alan.project.canada@gmail.com</string>
+    <string name="email_subject">Inquiry about application</string>
+    <string name="email_text">[Please share any opinion with respect to Rick and Morty Episode Guide]</string>
+    <string name="menu_episode">Episode</string>
+    <string name="menu_character">Character</string>
+    <string name="menu_location">Location</string>
+    <string name="menu_about">About</string>
+    <string name="menu_quote">Quote</string>
+    <string name="update_app">Wow, new version released !</string>
+    <string name="dialog_update_mandatory_available_message">please update the app to the latest version</string>
+    <string name="update_now">UPDATE NOW</string>
+    <string name="later">LATER</string>
+    <string name="dialog_update_available_message">A new version is found on Play store, please update for better usage.</string>
+    <string name="network_error_message">Temporary Network Error. Please try again later.</string>
+</resources>

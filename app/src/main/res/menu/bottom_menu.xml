@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_episodes"
+        android:enabled="true"
+        android:icon="@drawable/ic_tv_24"
+        android:title="@string/menu_episode" />
+    <item
+        android:id="@+id/menu_characters"
+        android:enabled="true"
+        android:icon="@drawable/menu_characters"
+        android:title="@string/menu_character" />
+    <item
+        android:id="@+id/menu_locations"
+        android:enabled="true"
+        android:icon="@drawable/menu_locations"
+        android:title="@string/menu_location" />
+    <item
+        android:id="@+id/menu_quote"
+        android:enabled="true"
+        android:icon="@drawable/menu_quote"
+        android:title="@string/menu_quote" />
+
+    <item
+        android:id="@+id/menu_info"
+        android:enabled="true"
+        android:icon="@drawable/menu_info"
+        android:title="@string/menu_about" />
+
+
+</menu>

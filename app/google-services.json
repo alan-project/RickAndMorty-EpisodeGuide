@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "582894971807",
+    "project_id": "rick-morty-guidance",
+    "storage_bucket": "rick-morty-guidance.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:582894971807:android:aa2d89b95e898facac6baa",
+        "android_client_info": {
+          "package_name": "net.alanproject.rickandmorty"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "582894971807-tcm8rd5dqcntaq14g5805uu7cvqeldpb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDc7GW2a6FAWN32SXrULy-JR_8vuN4xXUg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "582894971807-tcm8rd5dqcntaq14g5805uu7cvqeldpb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

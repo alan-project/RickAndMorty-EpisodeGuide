@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        app:iconSpaceReserved="false"
+        app:title="@string/app_info_title">
+        <Preference
+            app:icon="@drawable/ic_portal"
+            app:key="@string/info_app_key"
+            app:summary="@string/info_app_summary"
+            app:title="@string/info_app_title" />
+
+        <Preference
+            app:icon="@drawable/github_blue"
+            app:key="@string/info_github_key"
+            app:summary="@string/info_github_summary"
+            app:title="@string/info_github_title" />
+
+    </PreferenceCategory>
+    <PreferenceCategory
+        app:iconSpaceReserved="false"
+        app:title="@string/app_settings_title">
+
+        <SwitchPreferenceCompat
+            app:defaultValue="true"
+            app:iconSpaceReserved="false"
+            app:key="@string/setting_dark_key"
+            app:title="@string/setting_dark_title" />
+
+        <Preference
+            app:iconSpaceReserved="false"
+            app:key="@string/rating"
+            app:summary="@string/rating_summary"
+            app:title="@string/rating_title" />
+
+        <Preference
+            app:iconSpaceReserved="false"
+            app:key="@string/send_feedback"
+            app:summary="@string/send_feedback_summary"
+            app:title="@string/send_feedback_title" />
+
+        <Preference
+            app:iconSpaceReserved="false"
+            app:key="@string/version"
+            app:summary="@string/version_summary"
+            app:title="@string/version_title" />
+
+    </PreferenceCategory>
+
+
+</PreferenceScreen>

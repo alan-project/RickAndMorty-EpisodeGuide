@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="net.alanproject.rickandmorty.ui.activity.episode.EpisodeViewModel" />
+
+        <variable
+            name="episode"
+            type="net.alanproject.domain.model.DomainEpiModel" />
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/collapsing_test"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/collapse_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                app:contentScrim="@color/purple"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    app:layout_collapseMode="parallax"
+                    tools:context=".ui.activity.episode.EpisodeActivity">
+
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/iv_background"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:layout_margin="8dp"
+                        android:scaleType="center"
+                        app:blurredCharacterDrawableImage="@{@drawable/episode_title}"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:shapeAppearanceOverlay="@style/roundedCornerImageView" />
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/tv_image"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:padding="5dp"
+                        android:scaleType="centerCrop"
+                        app:characterDrawableImage="@{@drawable/episode_icon}"
+                        app:layout_constraintBottom_toBottomOf="@id/iv_background"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/iv_background"
+                        app:shapeAppearanceOverlay="@style/circle"
+                        app:strokeColor="@color/white"
+                        app:strokeWidth="5dp" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="240dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:autoSizeTextType="uniform"
+
+                        android:elevation="4dp"
+                        android:maxLines="2"
+
+                        android:text="@{vm.episodeTitleFromAsset.title}"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="@id/tv_image"
+                        app:layout_constraintStart_toStartOf="@id/tv_image"
+                        app:layout_constraintTop_toBottomOf="@id/tv_image"
+                        tools:text="First Episode" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_epi_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="80dp"
+                        android:text="@string/tv_epi_title"
+                        android:textColor="@color/light_grey_2"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_image" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_epi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{vm.episodeTitleFromAsset.epi}"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@id/tv_epi_title"
+                        app:layout_constraintTop_toBottomOf="@id/tv_epi_title"
+                        tools:text="E01S03" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_air_date_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="140dp"
+                        android:text="@string/tv_air_date_title"
+                        android:textColor="@color/light_grey_2"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toEndOf="@id/tv_epi_title"
+                        app:layout_constraintTop_toTopOf="@id/tv_epi_title" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_air_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{vm.episodeTitleFromAsset.date}"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@id/tv_air_date_title"
+                        app:layout_constraintTop_toBottomOf="@id/tv_air_date_title"
+                        tools:text="Dec 02 2018" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_synop_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/tv_synop_title"
+                        android:textColor="@color/light_grey_2"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@id/tv_epi"
+                        app:layout_constraintTop_toBottomOf="@id/tv_epi" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_synop"
+                        android:layout_width="340dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="4dp"
+                        android:scrollbars="vertical"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@id/tv_synop_title"
+                        app:layout_constraintTop_toBottomOf="@id/tv_synop_title"
+                        tools:text="@{vm.episodeTitleFromAsset.synop}" />
+
+                    <View
+                        android:id="@+id/divider"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:background="@color/dark_grey"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_synop" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.google.android.material.appbar.MaterialToolbar
+
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:contentInsetLeft="0dp"
+                    app:contentInsetStart="0dp"
+                    app:layout_collapseMode="pin"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                </com.google.android.material.appbar.MaterialToolbar>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_inner2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_character_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/tv_character_title"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_characters"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:scrollbars="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_character_title"
+                app:updateCharacterList="@{vm.characterList}" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:indeterminateTint="@color/white_100"
+            android:visibility="@{vm.progressBarVisibility}" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>
