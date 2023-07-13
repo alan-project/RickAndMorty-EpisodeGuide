@@ -34,16 +34,18 @@ class QuoteFragment : Fragment() {
 
         binding.fragment = this
         binding.vm = viewModel
-        viewModel.quotes.observe(requireActivity(), { quote ->
+        viewModel.quotes.observe(requireActivity()) { quote ->
             Timber.d("initObserving: $quote")
             if (!quote.isNullOrEmpty()) {
                 Timber.d("!quote.isNullOrEmpty()")
                 displayQuotesPager(quote)
             } else {
                 Firebase.crashlytics.recordException(Throwable("fetching quotes failed"))
-                Toast.makeText(requireContext(),getString(R.string.network_error_message),Toast.LENGTH_LONG).show()
+                Toast.makeText(requireContext(),
+                    getString(R.string.network_error_message),
+                    Toast.LENGTH_LONG).show()
             }
-        })
+        }
 
         binding.lifecycleOwner = viewLifecycleOwner
 

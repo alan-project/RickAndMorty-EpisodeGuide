@@ -30,9 +30,9 @@ class EpisodeActivity : AppCompatActivity() {
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_episode)
         binding.vm = viewModel.apply{
-            viewModel.episodeTitleFromAsset.observe(this@EpisodeActivity, { episode ->
+            viewModel.episodeTitleFromAsset.observe(this@EpisodeActivity) { episode ->
                 episodeModel = episode
-            })
+            }
         }
         binding.lifecycleOwner = this
 

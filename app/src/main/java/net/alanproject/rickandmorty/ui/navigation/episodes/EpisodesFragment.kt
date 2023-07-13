@@ -46,7 +46,6 @@ class EpisodesFragment : Fragment() {
         binding.viewpagerEpiList.adapter = adapter
 
         TabLayoutMediator(binding.tabLayout, binding.viewpagerEpiList) { tab, position ->
-
         }.attach()
 
         val viewPagerCallback = object : ViewPager2.OnPageChangeCallback() {
@@ -57,9 +56,7 @@ class EpisodesFragment : Fragment() {
                     2 -> updateImage(R.drawable.season03)
                     3 -> updateImage(R.drawable.season04)
                     4 -> updateImage(R.drawable.season02)
-
                 }
-
                 super.onPageSelected(position)
             }
         }
