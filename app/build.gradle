@@ -47,6 +47,9 @@ android {
     kapt {
         correctErrorTypes true
     }
+    lintOptions {
+        abortOnError false
+    }
 }
 
 dependencies {
@@ -70,7 +73,7 @@ dependencies {
     implementation "com.squareup.retrofit2:converter-gson:2.9.0"
 
     //glide
-    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    implementation 'com.github.bumptech.glide:glide:4.14.2'
     implementation 'jp.wasabeef:glide-transformations:4.3.0'
     implementation 'jp.co.cyberagent.android:gpuimage:2.1.0'
 

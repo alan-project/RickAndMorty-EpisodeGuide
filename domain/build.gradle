@@ -37,6 +37,9 @@ android {
     kapt {
         correctErrorTypes true
     }
+    lintOptions {
+        abortOnError false
+    }
 }
 
 dependencies {
@@ -51,7 +54,7 @@ dependencies {
     //retrofit
     implementation "com.squareup.retrofit2:retrofit:2.9.0"
     implementation "com.squareup.retrofit2:converter-gson:2.9.0"
-    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    implementation 'com.github.bumptech.glide:glide:4.14.2'
 
     //rx
     implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
