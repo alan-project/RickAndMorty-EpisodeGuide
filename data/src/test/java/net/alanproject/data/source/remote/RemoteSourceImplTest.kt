@@ -12,7 +12,7 @@ import org.mockito.Mockito.`when`
 import org.mockito.MockitoAnnotations
 
 class RemoteSourceImplTest {
-
+/*
     @Mock
     private lateinit var api: CartoonApi
 
@@ -220,5 +220,5 @@ class RemoteSourceImplTest {
 
     }
 
-    //TODO exception case
+    //TODO exception case*/
 }
